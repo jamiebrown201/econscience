@@ -11,9 +11,11 @@
   "page_action" :
 	  {
 	    "default_icon" : "icon.png",
-	    "default_title" : "SAVE ELEPHANTS"
+	    "default_title" : "SAVE ELEPHANTS",
+      "default_popup" : "popup.html"
 	  },
   "permissions": [
-    "declarativeContent"
+    "declarativeContent",
+    "notifications"
   ]
 }
