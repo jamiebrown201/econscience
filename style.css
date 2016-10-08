@@ -2,26 +2,49 @@ body {
   font-family: futura, sans-serif;
   width:300px;
   float: right;
-  padding: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 0px;
 }
 
-h1 {
+h2 {
+  padding-bottom: 20px;
+}
+
+p {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 span#buzzfeed {
   color: #ee3322;
 }
 
+img#fb {
+  margin-bottom: 20px;
+}
+
 td#facts {
   text-align: center;
 }
+
+button.btn.btn-info {
+  border: none;
+  background-color: #d3d3d3;
+  color: black;
+}
+
+button.btn.btn-info:active {
+  border: none;
+  background-color: #d3d3d3;
+  color: black;
+}
+
 
 p {
   font-family: futura LT light;
 }
 
 span#number {
-  font-size: 20px;
+  font-size: 50px;
   color: #ee3322;
   font-weight: bold;
 }
@@ -32,4 +55,7 @@ button {
   border: none;
   font-size: 16px;
   margin: 10px 0px 10px 0px;
+  border-radius: 4px;
+  color: #ee3322;
+
 }
