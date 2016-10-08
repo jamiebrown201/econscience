@@ -1,18 +1,27 @@
-// When the extension is installed or upgraded ...
-chrome.runtime.onInstalled.addListener(function() {
-  // Replace all rules ...
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    // With a new rule ...
+function createSetIconAction(path, callback) {
+  var canvas = document.createElement("canvas");
+  var ctx = canvas.getContext("2d");
+  var image = new Image();
+  image.onload = function() {
+    ctx.drawImage(image,0,0,120,120);
+    var imageData = ctx.getImageData(0,0,120,120);
+    var action = new chrome.declarativeContent.SetIcon({imageData: imageData});
+    callback(action);
+  }
+  image.src = chrome.runtime.getURL(path);
+}
+
+
+chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
+  createSetIconAction("icon_active.png", function(setIconAction) {
     chrome.declarativeContent.onPageChanged.addRules([
       {
-        // That fires when a page's URL contains a 'g' ...
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlContains: 'buzzfeed.com' },
           })
         ],
-        // And shows the extension's page action.
-        actions: [ new chrome.declarativeContent.ShowPageAction() ]
+        actions    : [ setIconAction ]
       }
     ]);
   });
