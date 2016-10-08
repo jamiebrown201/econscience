@@ -13,7 +13,7 @@ function createSetIconAction(path, callback) {
 
 
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
-  createSetIconAction("icon_active.png", function(setIconAction) {
+  createSetIconAction("gif-load.gif", function(setIconAction) {
     chrome.declarativeContent.onPageChanged.addRules([
       {
         conditions: [
