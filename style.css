@@ -1,0 +1,35 @@
+body {
+  font-family: futura, sans-serif;
+  width:300px;
+  float: right;
+  padding: 5px 5px 5px 5px;
+}
+
+h1 {
+}
+
+span#buzzfeed {
+  color: #ee3322;
+}
+
+td#facts {
+  text-align: center;
+}
+
+p {
+  font-family: futura LT light;
+}
+
+span#number {
+  font-size: 20px;
+  color: #ee3322;
+  font-weight: bold;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  margin: 10px 0px 10px 0px;
+}
