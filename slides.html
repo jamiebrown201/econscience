@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="slides.css">
+  </head>
+  <body>
+    <script "text/javascript" src='peanut_butter.js'>
+    for (i = 0; i < peanut_butter.length; i++) {
+      document.getElementById('item'+i).innerHTML = "hello";
+    }
+    </script>
+    <ul id="slides">
+        <li class="slide showing">Slide 1
+          <p id="item0"></p>
+        </li>
+        <li class="slide">Slide 2
+          <p id="item1"></p>
+        </li>
+        <li class="slide">Slide 3
+          <p id="item2"></p>
+        </li>
+        <li class="slide">Slide 4
+          <p id="item3"></p>
+        </li>
+    </ul>
+  <button class="controls" id="previous">Previous</button>
+  <button class="controls" id="pause">Pause</button>
+  <button class="controls" id="next">Next</button>
+
+  <script type="text/javascript" src="slides.js"></script>
+  </body>
+</html>
