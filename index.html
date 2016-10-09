@@ -2,19 +2,20 @@
 <html>
   <head>
     <title>eConscience</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
     <link rel="stylesheet" href="style.css"/>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="popup.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </head>
   <body>
     <h1></h1>
     <table>
       <tr>
         <td id="social-media">
-          <h2>Did <span id="buzzfeed">BuzzFeed</span> mention they were endangered, if not let them know...</h2>
-          <a href="https://www.facebook.com/BuzzFeed/"><img src="img/facebook.png" height="30px;"></a>
-          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=@Buzzfeed+save+the+pangolin"
+          <h2>Did <span id="buzzfeed">BuzzFeed</span> mention pangolins were endangered, if not let them know...</h2>
+          <a href="https://www.facebook.com/BuzzFeed/"><img id="fb" src="img/facebook.png" height="30px;"></a>
+          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=@Buzzfeed+Hey,+BuzzFeed!+I+noticed+you+forgot+to+mention+how+endangered+the+pangolin+is+in+your+article"
             data-size="large">Tweet</a>
           <script>window.twttr = (function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0],
@@ -24,12 +25,10 @@
                     js.id = id;
                     js.src = "https://platform.twitter.com/widgets.js";
                     fjs.parentNode.insertBefore(js, fjs);
-
                     t._e = [];
                     t.ready = function(f) {
                       t._e.push(f);
                     };
-
                     return t;
                   }(document, "script", "twitter-wjs"));
           </script>
@@ -37,26 +36,24 @@
       </tr>
       <tr>
         <td id="facts">
-
-          <h2>Facts</h2>
           <hr>
           <p><span id="number">100,000</span></br> pangolins are estimated to be
             captured every year from across Africa and Asia.</p>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Find Out More</button>
+            <div id="demo" class="collapse">
+              <p>all eight species of pangolin now feature on the International Union
+              for the Conservation of Nature (IUCN) Red List of animals threatened with extinction.</p>
+              <p>Pangolins are declining throughout their range due to increasing demand for their
+              meat, which is seen as a delicacy, and scales and other body parts, which are used in
+              some traditional medicines.</p>
+              <h3>Donate to make a difference?</h3>
+              <a href="http://sites.zsl.org/forms/view.php?id=47753"><img src="img/IUCN.png" width="300px;"></a>
+              <a href="https://www.paypal.com/vn/cgi-bin/webscr?"><img src="img/save-vietnams-wildlife.jpg" width="300px;"></a>
+              <form action="https://www.rainforest-rescue.org/petitions/963/take-pangolins-off-the-menu-now">
+              <button type="submit">Sign a Pettition!</button>
+            </form>
+            </div>
           <hr>
-        </td>
-      </tr>
-      <tr>
-        <td id="donate">
-          <h3>Donate to make a difference?</h3>
-          <a href="http://sites.zsl.org/forms/view.php?id=47753"><img src="img/IUCN.png" width="300px;"></a>
-          <a href="https://www.paypal.com/vn/cgi-bin/webscr?"><img src="img/save-vietnams-wildlife.jpg" width="300px;"></a>
-        </td>
-      </tr>
-      <tr>
-        <td id="petition">
-          <form action="https://www.rainforest-rescue.org/petitions/963/take-pangolins-off-the-menu-now">
-            <button type="submit">Sign a pettition!</button>
-          </form>
         </td>
       </tr>
     </table>
