@@ -1,11 +1,25 @@
+@font-face {
+    font-family: 'ourFont'; /*a name to be used later*/
+    src: url("fonts/coolvetica rg.ttf"); /*URL to font*/
+}
+
 body {
-  font-family: futura, sans-serif;
-  width:300px;
+  width:320px;
   float: right;
   padding: 5px 5px 5px 5px;
 }
 
-h1 {
+#econscience {
+  width: 300px;
+}
+
+#header {
+  text-align: center;
+  font-family: 'ourFont';
+}
+
+#social-buttons {
+  text-align: center;
 }
 
 span#buzzfeed {
@@ -13,11 +27,13 @@ span#buzzfeed {
 }
 
 td#facts {
+  font-family: 'ourFont';
   text-align: center;
+  width: 280px;
 }
 
 p {
-  font-family: futura LT light;
+  font-family: 'ourFont';
 }
 
 span#number {
