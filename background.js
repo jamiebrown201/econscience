@@ -18,7 +18,7 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
       {
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlContains: 'tesco.com' },
+            pageUrl: { urlContains: 'buzzfeed.com' && 'pangolin' },
           })
         ],
         actions    : [ setIconAction,
